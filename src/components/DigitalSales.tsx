@@ -10,7 +10,7 @@ const arryNativeApp = ["Soluções customizadas", "Acelerador", "Super App"];
 export function DigitalSales() {
   return (
     <>
-      <div className="w-full flex flex-col md:flex-row justify-center items-center  gap-4 md:bg-bg-implantacao px-4 py-8 rounded-3xl content-center min-h-96">
+      <div className="w-full flex flex-col items-start justify-start md:flex-row md:content-center md:items-center md:justify-center gap-4 bg-bg-implantacao px-4 py-8 rounded-3xl min-h-96 ">
         <div className="shadow-neutral-200 w-full md:w-[35%] bg-white shadow p-6 rounded-lg">
           <div className="flex gap-2 text-xl items-center mb-6">
             <Image src={Web} alt="icone WEB" />
@@ -30,7 +30,7 @@ export function DigitalSales() {
           </nav>
         </div>
 
-        <div className="shadow-neutral-200 w-full md:w-[35%] bg-white shadow p-4 rounded-lg">
+        <div className="shadow-neutral-200 w-full md:w-[35%] bg-white shadow p-6 rounded-lg">
           <div className="flex gap-2 text-xl items-center mb-6">
             <Image src={NativeApp} alt="icone native app" />
             Native App
