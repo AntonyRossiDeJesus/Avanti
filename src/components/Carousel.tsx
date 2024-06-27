@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Smile from "@/assets/Smiles.png";
 import Ampm from "@/assets/AmPm.png";
-import Intelbras from "@/assets/Intelbras.png";
+import Intelbras from "@/assets/Intelbras-webp.webp";
 import Kopenhagen from "@/assets/Kopenhagen.png";
 import SaoJoao from "@/assets/Logo-Farmacias-Sao-Joao-Positiva.png";
 import Hypera from "@/assets/logo-negativo.png";
