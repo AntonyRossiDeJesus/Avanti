@@ -13,6 +13,9 @@ const config: Config = {
       colors: {
         "bg-primary": "#02101F",
         "bg-hambuguer": "#1D242D",
+        "bg-soluctions": "#e6efff",
+        "line-soluctions": " #E8E9EA",
+        "bg-implantacao": "#FAFBFC",
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
       },
