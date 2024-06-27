@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 import Mouse from "@/assets/iconeBotaoBanner.png";
 
 import VideoBackground from "@/components/VideoBackground";
 import Carousel from "@/components/Carousel";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className="relative bg-bg-primary text-white min-h-[550px] md:min-h-screen flex justify-center items-center pb-6 pt-6">
       <div className="container absolute flex flex-col items-center">
