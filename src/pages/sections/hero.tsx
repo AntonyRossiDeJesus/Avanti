@@ -1,27 +1,19 @@
-import Image from "next/image";
+"use client";
 
-import Smile from "@/assets/Smiles.png";
-import Ampm from "@/assets/AmPm.png";
-import Intelbras from "@/assets/Intelbras.png";
-import Kopenhagen from "@/assets/Kopenhagen.png";
-import SaoJoao from "@/assets/Logo-Farmacias-Sao-Joao-Positiva.png";
-import Hypera from "@/assets/logo-negativo.png";
-import Loungerie from "@/assets/Loungerie.png";
-import Orfeu from "@/assets/Orfeu-Horizontal-Negativo-PB.png";
+import Image from "next/image";
 
 import VideoBackground from "@/components/VideoBackground";
 import Carousel from "@/components/Carousel";
-import Slider from "@/app";
 
 export function Hero() {
   return (
-    <section className="relative bg-bg-primary text-white min-h-[550px] flex justify-center items-center ">
-      <div className="z-10 container absolute p-16">
-        <div className="flex items-center justify-center flex-col gap-4 pt-28">
-          <h1 className="text-2xl font-bold">
+    <section className="relative bg-bg-primary text-white min-h-[550px] md:min-h-[650px] flex justify-center items-center gradient-overlay">
+      <div className="z-20 container absolute flex flex-col items-center">
+        <div className="flex items-center justify-center flex-col gap-4 pt-28 px-2 max-w-[532px]">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             Complete for <span className="text-text-primary">commerce</span>
-          </h1>
-          <p className="text-center text-text-secundary">
+          </h2>
+          <p className="text-center text-text-secundary md:text-lg lg:text-2xl">
             Impulsione o e-commerce da sua empresa com soluções integradas,
             performance e experiência.
           </p>
@@ -30,55 +22,12 @@ export function Hero() {
           </button>
         </div>
 
-        {/* <div className="pt-20">
-          <div>
-            <div className="overflow-hidden">
-              <div
-                className="w-[2664px] flex gap-6 overflow-hidden"
-                id="carouselTrack"
-              >
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Smile} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Ampm} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Intelbras} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Kopenhagen} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={SaoJoao} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Hypera} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Loungerie} alt="" />
-                </div>
-
-                <div className="w-[148px] mx-[10px] px-[8px]">
-                  <Image src={Orfeu} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        <div>
+        <div className="w-[355px] md:w-[75%] lg:w-[72%] xl:w-[88%] pt-14 md:pt-24">
           <Carousel />
         </div>
-
-        <Slider />
       </div>
+
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-bg-primary via-transparent to-transparent z-20"></div>
 
       <VideoBackground />
     </section>

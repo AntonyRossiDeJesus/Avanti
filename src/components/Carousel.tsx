@@ -1,69 +1,54 @@
-"use client";
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
-import { register } from "swiper/element/bundle";
-// register Swiper custom elements
-register();
-
-import { useState, useEffect } from "react";
-
+// Importe suas imagens diretamente no componente ou passe os caminhos como props
 import Smile from "@/assets/Smiles.png";
 import Ampm from "@/assets/AmPm.png";
-import Intelbras from "@/assets/Intelbras.png";
-import Kopenhagen from "@/assets/Kopenhagen.png";
+import Intelbras from "@/assets/intelbras.png";
+import Kopenhagen from "@/assets/kopenhagen.png";
 import SaoJoao from "@/assets/Logo-Farmacias-Sao-Joao-Positiva.png";
 import Hypera from "@/assets/logo-negativo.png";
-import Loungerie from "@/assets/Loungerie.png";
+import Loungerie from "@/assets/loungerie.png";
 import Orfeu from "@/assets/Orfeu-Horizontal-Negativo-PB.png";
 
 const Carousel = () => {
   const images = [
-    Smile,
-    Ampm,
-    Intelbras,
-    Kopenhagen,
-    SaoJoao,
-    Hypera,
-    Loungerie,
-    Orfeu,
+    { src: Smile, alt: "Smile" },
+    { src: Ampm, alt: "Ampm" },
+    { src: Intelbras, alt: "Intelbras" },
+    { src: Kopenhagen, alt: "Kopenhagen" },
+    { src: SaoJoao, alt: "SaoJoao" },
+    { src: Hypera, alt: "Hypera" },
+    { src: Loungerie, alt: "Loungerie" },
+    { src: Orfeu, alt: "Orfeu" },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemWidth = 148 + 10 + 10 + 8 + 8; // largura do item + margens + preenchimentos
-  const totalItems = images.length;
-  const visibleItems = 4; // número de itens visíveis por vez
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
-    }, 4000); // Altere o intervalo de tempo conforme necessário (4000ms = 4 segundos)
+    const interval = setInterval(() => {
+      if (trackRef.current) {
+        const firstChild = trackRef.current.children[0];
+        const clonedChild = firstChild.cloneNode(true);
 
-    return () => clearInterval(timer); // Limpar o intervalo ao desmontar o componente
-  }, [totalItems]);
+        trackRef.current.appendChild(clonedChild);
+        trackRef.current.removeChild(firstChild);
+      }
+    }, 2000); // Ajuste o tempo conforme necessário
 
-  const moveTrack = () => {
-    const trackPosition = -currentIndex * itemWidth;
-    return {
-      width: `${totalItems * itemWidth}px`, // define a largura total do carrossel
-      transform: `translateX(${trackPosition}px)`,
-      transition: "transform 1s ease", // transição mais suave
-    };
-  };
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="pt-20 overflow-hidden">
-      <div
-        className="w-[2664px] flex gap-6 overflow-hidden"
-        style={moveTrack()}
-      >
-        {images.map((image, index) => (
-          <div key={index} className="w-[148px] mx-[10px] px-[8px]">
-            <img
-              src={image.src}
-              alt={`Image ${index + 1}`}
-              className="w-full"
-            />
-          </div>
-        ))}
+    <div className="pt-20 overflow-hidden ">
+      <div className="flex gap-6 overflow-hidden relative ">
+        <div className="w-[2664px] flex gap-6" ref={trackRef}>
+          {images.map((image, index) => (
+            <div key={index} className="w-[148px] mx-[10px] px-[8px]">
+              <Image src={image.src} alt={image.alt} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
