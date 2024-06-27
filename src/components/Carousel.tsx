@@ -1,14 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-// Importe suas imagens diretamente no componente ou passe os caminhos como props
 import Smile from "@/assets/Smiles.png";
 import Ampm from "@/assets/AmPm.png";
-import Intelbras from "@/assets/intelbras.png";
-import Kopenhagen from "@/assets/kopenhagen.png";
+import Intelbras from "@/assets/Intelbras.png";
+import Kopenhagen from "@/assets/Kopenhagen.png";
 import SaoJoao from "@/assets/Logo-Farmacias-Sao-Joao-Positiva.png";
 import Hypera from "@/assets/logo-negativo.png";
-import Loungerie from "@/assets/loungerie.png";
+import Loungerie from "@/assets/Loungerie.png";
 import Orfeu from "@/assets/Orfeu-Horizontal-Negativo-PB.png";
 
 const Carousel = () => {
@@ -34,7 +33,7 @@ const Carousel = () => {
         trackRef.current.appendChild(clonedChild);
         trackRef.current.removeChild(firstChild);
       }
-    }, 2000); // Ajuste o tempo conforme necessário
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
