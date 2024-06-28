@@ -14,7 +14,7 @@ export default function Hero() {
     <section className="relative bg-bg-primary text-white min-h-[700px] md:min-h-screen flex justify-center items-center pb-6 pt-6">
       <div className="container absolute flex flex-col items-center">
         <div className="z-20 flex items-center justify-center flex-col gap-4 pt-28 px-2 md:pt-10 md:px-0 max-w-[540px]">
-          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-white">
+          <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl text-white">
             Complete for <span className="text-text-primary">commerce</span>
           </h2>
           <p className="text-center text-text-secundary md:text-lg lg:text-2xl">

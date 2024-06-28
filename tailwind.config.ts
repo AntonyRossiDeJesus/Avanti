@@ -8,7 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {},
+      backgroundImage: {
+        thumbcases: "url('../assets/thum-site-case.png')",
+        thumbcases2: "url('../assets/thumb-case-site-1.jpg')",
+        thumbcases3: "url('../assets/thumb-sao-joaao.png')",
+      },
 
       colors: {
         "bg-primary": "#02101F",
@@ -16,6 +20,7 @@ const config: Config = {
         "bg-soluctions": "#e6efff",
         "line-soluctions": " #E8E9EA",
         "bg-implantacao": "#FAFBFC",
+        "bg-line-cases": "#E5E7EB",
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
       },
