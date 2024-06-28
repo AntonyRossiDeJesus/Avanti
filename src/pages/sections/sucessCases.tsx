@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 import { CarouselCases } from "@/components/CarouselCases";
 
-export function SucessCases() {
+export default function SucessCases() {
   return (
     <>
       <section className="overflow-hidden flex justify-center items-center flex-col">
