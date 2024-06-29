@@ -5,7 +5,7 @@ const arryThumbCases = ["Implantação E-commerce VTEX", "Consultoria"];
 export function OrfeuCases() {
   return (
     <>
-      <div className="pt-2 border-t w-[100%] p-2">
+      <div className="pt-2 border-t w-[100%]">
         <div className="relative bg-thumbcases bg-cover w-full pt-[100%] "></div>
 
         <nav className="gap-3 flex flex-wrap items-baseline font-bold py-4">
@@ -20,7 +20,7 @@ export function OrfeuCases() {
           ))}
         </nav>
 
-        <p className="xl:text-2xl">
+        <p className="xl:text-2xl p-2">
           Como a Orfeu transmitiu a essência da marca para o digital com a
           parceria da Avanti
         </p>

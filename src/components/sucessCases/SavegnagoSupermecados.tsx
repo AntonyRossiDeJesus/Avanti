@@ -10,7 +10,7 @@ const arryThumbCases2 = [
 export function SavegnagoCases() {
   return (
     <>
-      <div className="pt-2 border-t w-[100%] p-2">
+      <div className="pt-2 border-t w-[100%] ">
         <div className="relative bg-thumbcases2 bg-cover w-full pt-[100%] "></div>
 
         <nav className="gap-3 w-full flex flex-wrap items-baseline font-bold py-4">

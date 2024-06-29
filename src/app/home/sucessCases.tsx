@@ -43,11 +43,21 @@ export default function SucessCases() {
     });
   };
 
+  const getButtonClass = (index: number) => {
+    if (is2XL) {
+      if (index === 0 && currentIndex === 0) return "bg-text-primary";
+      if (index > 0 && currentIndex > 0) return "bg-text-primary";
+      return "bg-bg-line-cases";
+    } else {
+      return currentIndex === index ? "bg-text-primary" : "bg-bg-line-cases";
+    }
+  };
+
   return (
     <>
       <section className="overflow-hidden flex justify-center items-center flex-col">
-        <div className="container xl:min-w-full  flex flex-col xl:flex-row py-5  gap-x-5">
-          <div className=" xl:min-w-[450px] px-4 z-10 bg-white p-2 xl:p-28">
+        <div className="container xl:min-w-full flex flex-col xl:flex-row py-5 gap-x-5">
+          <div className="xl:min-w-[40%] px-4 z-10 bg-white p-2 xl:pl-28">
             <h1 className="text-[28px] lg:text-4xl w-[80%] xl:text-5xl pb-4 xl:leading-[1.36] ">
               Explore nossos cases de
               <span className="text-text-primary"> sucesso</span>
@@ -60,9 +70,9 @@ export default function SucessCases() {
             </p>
           </div>
 
-          <div className="relative flex w-full gap-1 md:gap-20 lg:gap-24 xl:gap-2">
+          <div className="relative flex w-full gap-1 md:gap-20 lg:gap-24 xl:gap-2 pl-2">
             <div
-              className={`flex min-w-[100%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[50%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -71,7 +81,7 @@ export default function SucessCases() {
             </div>
 
             <div
-              className={`flex min-w-[100%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[50%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -80,7 +90,7 @@ export default function SucessCases() {
             </div>
 
             <div
-              className={`flex min-w-[100%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[50%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -90,30 +100,16 @@ export default function SucessCases() {
           </div>
         </div>
 
-        <div className="container py-4 px-8 flex items-center justify-end gap-x-4 ">
-          <div className="flex items-center w-[60%] lg:w-[500px]  h-[4px]">
-            <button
-              className={`h-1 w-full ${
-                currentIndex === 0 ? "bg-text-primary" : "bg-bg-line-cases"
-              }`}
-            ></button>
-            <button
-              className={`h-1 w-full ${
-                currentIndex === 1 ? "bg-text-primary" : "bg-bg-line-cases"
-              }`}
-            ></button>
-            <button
-              className={`h-1 w-full ${
-                currentIndex === 2 && !is2XL
-                  ? "bg-text-primary"
-                  : "bg-bg-line-cases"
-              }`}
-            ></button>
+        <div className="container py-4 px-8 flex items-center justify-end gap-x-4">
+          <div className="flex items-center w-[60%] lg:w-[500px] h-[4px]">
+            <button className={`h-1 w-full ${getButtonClass(0)}`}></button>
+            <button className={`h-1 w-full ${getButtonClass(1)}`}></button>
+            <button className={`h-1 w-full ${getButtonClass(2)}`}></button>
           </div>
 
-          <div className="flex gap-x-4 ">
+          <div className="flex gap-x-4">
             <button
-              className="flex justify-center items-center rounded-full w-11 h-11 hover:bg-text-primary  transition-all"
+              className="flex justify-center items-center rounded-full w-11 h-11 hover:border-l-2 hover:border-text-primary transition-all"
               onClick={handlePrev}
             >
               <Image
@@ -123,7 +119,7 @@ export default function SucessCases() {
               />
             </button>
             <button
-              className="flex justify-center items-center rounded-full w-11 h-11 hover:bg-text-primary  transition-all"
+              className="flex justify-center items-center rounded-full w-11 h-11 hover:border-r-2 hover:border-text-primary transition-all"
               onClick={handleNext}
             >
               <Image
