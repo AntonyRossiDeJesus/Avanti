@@ -29,3 +29,49 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+
+.popup-menu {
+  @apply fixed top-0 right-0 w-80 h-screen bg-white shadow-lg z-50 overflow-y-auto transition-transform ease-in-out transform translate-x-full p-8;
+}
+
+/* .popup-menu-icone {
+  @apply flex justify-center bg-contain bg-no-repeat w-4/5 h-40;
+  background-image: url('/imgs/LOGO1-MAX.svg'); /* Atualize o caminho conforme necessário */
+} */
+
+.popup-menu--lista {
+  @apply flex flex-col items-center gap-4 w-full h-40 text-black list-none p-8;
+}
+
+.popup-menu--item {
+  @apply text-purple-600; /* Substitua com a sua cor */
+}
+
+.popup-menu.open {
+  @apply block translate-x-0;
+}
+
+.cabecalho__container--hamburguer {
+  @apply cursor-pointer relative z-50;
+}
+
+.cabecalho__container--hamburguer-item {
+  @apply block w-8 h-1 bg-black my-1 transition-transform;
+}
+
+.cabecalho__container--hamburguer.open .top {
+  @apply transform rotate-45 translate-y-2;
+}
+
+.cabecalho__container--hamburguer.open .middle {
+  @apply opacity-0;
+}
+
+.cabecalho__container--hamburguer.open .bottom {
+  @apply transform -rotate-45 -translate-y-2;
+}
+
+.no-scroll {
+  @apply overflow-hidden;
+}

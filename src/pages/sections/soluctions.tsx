@@ -9,9 +9,9 @@ import Experience from "@/assets/experience.svg";
 import LeftArrow from "@/assets/leftarrow.png";
 import RightArrow from "@/assets/rightarrow.png";
 
-import { DigitalSales } from "@/components/DigitalSales";
-import { SalesPerformance } from "@/components/SalesPerformance";
-import { SalesExperience } from "@/components/Experience";
+import { DigitalSales } from "@/components/soluctions/DigitalSales";
+import { SalesPerformance } from "@/components/soluctions/SalesPerformance";
+import { SalesExperience } from "@/components/soluctions/Experience";
 
 const components = [
   <DigitalSales />,

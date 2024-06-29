@@ -1,8 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import Logo from "@/assets/logo.png";
-import Hamburguer from "@/assets/hamburger.png";
+import PopupMenu from "@/components/popupMenu/PopupMenu";
 
 const arryMenu = [
   "Serviços",
@@ -12,8 +15,27 @@ const arryMenu = [
   "Marketing Digital",
 ];
 
-export function Header() {
-  const activedStyled = "text-white text-opacity-100 text-white rounded-full";
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    // document.body.classList.toggle("no-scroll", !isOpen);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
+
+  const activedStyled = "text-white text-opacity-100 rounded-full";
+
   return (
     <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center">
       <div className="container flex justify-between items-center">
@@ -23,10 +45,10 @@ export function Header() {
           {arryMenu.map((item, index) => (
             <Link
               key={index}
-              className={`px-4 py-2 text-white text-opacity-60 hover:text-opacity-100 transition-all ${
+              className={`px-4 py-2 text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
                 index === 0 ? activedStyled : ""
               }`}
-              href={"#"}
+              href="#"
             >
               {item}
             </Link>
@@ -34,16 +56,38 @@ export function Header() {
 
           <Link
             className="flex items-center px-3 py-1 border rounded-full text-white font-bold transition-all hover:text-text-primary"
-            href={""}
+            href="#"
           >
             Fale Conosco
           </Link>
         </nav>
 
-        <div className="bg-bg-hambuguer w-10 h-10 flex items-center justify-center rounded-full lg:hidden">
-          <Image src={Hamburguer} alt="" />
+        <div
+          className={`z-[9999] flex flex-col justify-around w-8 h-8 cursor-pointer lg:hidden ${
+            isOpen ? "open" : ""
+          }`}
+          onClick={toggleMenu}
+        >
+          <span
+            className={` block w-full h-1 bg-bg-line-cases transition-transform transform ${
+              isOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></span>
+          <span
+            className={`block w-full h-1 bg-bg-line-cases transition-opacity ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={` block w-full h-1 bg-bg-line-cases transition-transform transform ${
+              isOpen ? "-rotate-45 -translate-y-[0.85rem]" : ""
+            }`}
+          ></span>
         </div>
       </div>
+      <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} />
     </header>
   );
-}
+};
+
+export default Header;

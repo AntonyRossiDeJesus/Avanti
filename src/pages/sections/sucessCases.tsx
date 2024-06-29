@@ -1,4 +1,9 @@
-import { CarouselCases } from "@/components/CarouselCases";
+import Image from "next/image";
+
+import LeftArrow from "@/assets/seta-esquerda.svg";
+import RightArrow from "@/assets/seta-direita.svg";
+
+import { CarouselCases } from "@/components/sucessCases/CarouselCases";
 
 export default function SucessCases() {
   return (
@@ -33,11 +38,11 @@ export default function SucessCases() {
           </div>
 
           <div className="flex gap-x-4 ">
-            <button className="flex justify-center pr-1 w-11 text-3xl h-11 border rounded-full">
-              &#60;
+            <button className="flex justify-center pr-1 w-11 text-3xl h-11">
+              <Image src={LeftArrow} alt="" />
             </button>
-            <button className="flex justify-center pl-1 w-11 text-3xl h-11 border rounded-full">
-              &#62;
+            <button className="flex justify-center pl-1 w-11 text-3xl h-11">
+              <Image src={RightArrow} alt="" />
             </button>
           </div>
         </div>

@@ -12,6 +12,7 @@ const config: Config = {
         thumbcases: "url('../assets/thum-site-case.png')",
         thumbcases2: "url('../assets/thumb-case-site-1.jpg')",
         thumbcases3: "url('../assets/thumb-sao-joaao.png')",
+        logoMax: "url('../assets/LOGO1-MAX.svg')",
       },
 
       colors: {
@@ -23,6 +24,7 @@ const config: Config = {
         "bg-line-cases": "#E5E7EB",
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
+        "bg-popup": "#101419",
       },
     },
   },

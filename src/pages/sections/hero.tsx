@@ -6,8 +6,8 @@ import React from "react";
 
 import Mouse from "@/assets/iconeBotaoBanner.png";
 
-import VideoBackground from "@/components/VideoBackground";
-import Carousel from "@/components/Carousel";
+import VideoBackground from "@/components/hero/VideoBackground";
+import Carousel from "@/components/hero/Carousel";
 
 export default function Hero() {
   return (
