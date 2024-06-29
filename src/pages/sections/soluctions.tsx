@@ -40,7 +40,10 @@ export default function Soluctions() {
 
   return (
     <>
-      <section className="w-full flex items-center justify-center">
+      <section
+        className="w-full flex items-center justify-center"
+        id="soluctions"
+      >
         <div className="container px-8">
           <div className="w-full py-6">
             <h1 className="text-left text-black font-normal text-2xl md:text-4xl leading-[1.36] lg:w-[55%] mb-4">

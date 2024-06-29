@@ -5,11 +5,18 @@ import Link from "next/link";
 import React from "react";
 
 import Mouse from "@/assets/iconeBotaoBanner.png";
-
 import VideoBackground from "@/components/hero/VideoBackground";
 import Carousel from "@/components/hero/Carousel";
 
 export default function Hero() {
+  const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    const targetSection = document.getElementById("soluctions");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section className="relative bg-bg-primary text-white min-h-[700px] md:min-h-screen flex justify-center items-center pb-6 pt-6">
       <div className="container absolute flex flex-col items-center">
@@ -32,7 +39,11 @@ export default function Hero() {
 
         <div className="z-20 flex md:mr-7 xl:mr-[38px] text-white ">
           <Image src={Mouse} alt="icone de um mouse" />
-          <Link className="cursor-pointer" href={"#solutions"}>
+          <Link
+            href="#soluctions"
+            onClick={scrollToSection}
+            className="cursor-pointer"
+          >
             Explore mais
           </Link>
         </div>
