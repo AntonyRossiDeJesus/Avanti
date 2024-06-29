@@ -13,6 +13,14 @@ const config: Config = {
         thumbcases2: "url('../assets/thumb-case-site-1.jpg')",
         thumbcases3: "url('../assets/thumb-sao-joaao.png')",
         logoMax: "url('../assets/LOGO1-MAX.svg')",
+        bgEcossistema: "url('../assets/ecosystem.png')",
+      },
+
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "38%": "38%",
       },
 
       colors: {
@@ -22,6 +30,10 @@ const config: Config = {
         "line-soluctions": " #E8E9EA",
         "bg-implantacao": "#FAFBFC",
         "bg-line-cases": "#E5E7EB",
+        "bg-depoiments": "#15181B",
+        "bg-navegation": "#1d242d",
+        "text-form-home": "#8C9A9E",
+        "bg-input-form-home": "#272e36",
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
         "bg-popup": "#101419",

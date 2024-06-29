@@ -28,7 +28,7 @@ export default function Hero() {
             Impulsione o e-commerce da sua empresa com soluções integradas,
             performance e experiência.
           </p>
-          <button className="bg-text-primary py-3 px-8 rounded-full cursor-pointer">
+          <button className="bg-text-primary py-3 px-8 rounded-full">
             Agendar uma apresentação
           </button>
         </div>

@@ -44,9 +44,9 @@ export default function Soluctions() {
         className="w-full flex items-center justify-center"
         id="soluctions"
       >
-        <div className="container px-8">
+        <div className="container">
           <div className="w-full py-6">
-            <h1 className="text-left text-black font-normal text-2xl md:text-4xl leading-[1.36] lg:w-[55%] mb-4">
+            <h1 className="text-left text-black px-4 font-normal text-2xl md:text-4xl leading-[1.36] lg:w-[55%] mb-4">
               Oferecemos soluções completas para o crescimento e eficiência do
               seu
               <span className="text-text-primary"> negócio</span>
