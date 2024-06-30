@@ -18,8 +18,10 @@ export function FormHome() {
             </p>
           </div>
 
-          {/* <form action="" className="flex flex-col"> */}
-          <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4">
+          <form
+            action=""
+            className="flex flex-col lg:flex-row lg:flex-wrap gap-4"
+          >
             <div className="w-full lg:w-[49%] flex flex-col gap-4">
               <label className="text-lg" htmlFor="">
                 Nome
@@ -63,18 +65,36 @@ export function FormHome() {
                 className="p-[15px] bg-bg-input-form-home  text-text-form-home rounded-md
                 "
               >
-                <option value="" disabled selected>
+                <option className="text-text-form-home" selected value="">
                   Selecione uma opção
                 </option>
-                <option value="vtex-cms">VTEX CMS</option>
-                <option value="vtex-io">VTEX IO</option>
-                <option value="oracle">Oracle</option>
-                <option value="magento">Magento</option>
-                <option value="sap">SAP</option>
-                <option value="salesforce">SalesForce</option>
-                <option value="linx-commerce">Linx Commerce</option>
-                <option value="outros">Outros</option>
-                <option value="nao-tenho">Não tenho e-commerce ainda</option>
+                <option className="text-white" value="vtex-cms">
+                  VTEX CMS
+                </option>
+                <option className="text-white" value="vtex-io">
+                  VTEX IO
+                </option>
+                <option className="text-white" value="oracle">
+                  Oracle
+                </option>
+                <option className="text-white" value="magento">
+                  Magento
+                </option>
+                <option className="text-white" value="sap">
+                  SAP
+                </option>
+                <option className="text-white" value="salesforce">
+                  SalesForce
+                </option>
+                <option className="text-white" value="linx-commerce">
+                  Linx Commerce
+                </option>
+                <option className="text-white" value="outros">
+                  Outros
+                </option>
+                <option className="text-white" value="nao-tenho">
+                  Não tenho e-commerce ainda
+                </option>
               </select>
             </div>
 
@@ -87,22 +107,36 @@ export function FormHome() {
                 id="cargo"
                 className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md"
               >
-                <option value="" disabled selected>
+                <option className="text-text-form-home" value="" selected>
                   Selecione uma opção
                 </option>
-                <option value="presidente-ceo">Presidente/CEO</option>
-                <option value="gerente-ecommerce">Gerente de e-commerce</option>
-                <option value="c-level-diretor">C-Level/Diretor</option>
-                <option value="gerente-marketing">Gerente de marketing</option>
-                <option value="gerente-ti">Gerente de TI</option>
-                <option value="analista-ecommerce">
+                <option className="text-white" value="presidente-ceo">
+                  Presidente/CEO
+                </option>
+                <option className="text-white" value="gerente-ecommerce">
+                  Gerente de e-commerce
+                </option>
+                <option className="text-white" value="c-level-diretor">
+                  C-Level/Diretor
+                </option>
+                <option className="text-white" value="gerente-marketing">
+                  Gerente de marketing
+                </option>
+                <option className="text-white" value="gerente-ti">
+                  Gerente de TI
+                </option>
+                <option className="text-white" value="analista-ecommerce">
                   Analista de e-commerce
                 </option>
-                <option value="analista-marketing">
+                <option className="text-white" value="analista-marketing">
                   Analista de marketing
                 </option>
-                <option value="outros">Outros</option>
-                <option value="nao-tenho">Não tenho e-commerce ainda</option>
+                <option className="text-white" value="outros">
+                  Outros
+                </option>
+                <option className="text-white" value="nao-tenho">
+                  Não tenho e-commerce ainda
+                </option>
               </select>
             </div>
 
@@ -115,15 +149,25 @@ export function FormHome() {
                 id="quantidade-funcionarios"
                 className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
               >
-                <option value="" disabled selected>
+                <option className="text-text-form-home" value="" selected>
                   Selecione uma opção
                 </option>
-                <option value="mais-de-1000">Mais de 1.000</option>
-                <option value="entre-500-999">Entre 500 a 999</option>
-                <option value="entre-200-499">Entre 200 a 499</option>
-                <option value="entre-100-199">Entre 100 a 199</option>
-                <option value="menos-de-100">Menos de 100</option>
-                <option value="nao-tenho-funcionarios">
+                <option className="text-white" value="mais-de-1000">
+                  Mais de 1.000
+                </option>
+                <option className="text-white" value="entre-500-999">
+                  Entre 500 a 999
+                </option>
+                <option className="text-white" value="entre-200-499">
+                  Entre 200 a 499
+                </option>
+                <option className="text-white" value="entre-100-199">
+                  Entre 100 a 199
+                </option>
+                <option className="text-white" value="menos-de-100">
+                  Menos de 100
+                </option>
+                <option className="text-white" value="nao-tenho-funcionarios">
                   Não tenho funcionários
                 </option>
               </select>
@@ -138,14 +182,25 @@ export function FormHome() {
                 id="quantidade-lojas"
                 className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
               >
-                <option value="" disabled selected>
+                <option className="text-text-form-home" value="" selected>
                   Selecione uma opção
                 </option>
-                <option value="mais-de-50">Mais de 50</option>
-                <option value="entre-21-50">Entre 21 a 50</option>
-                <option value="entre-6-20">Entre 6 a 20</option>
-                <option value="entre-1-5">Entre 1 a 5</option>
-                <option value="ainda-nao-tenho-espaco-fisico">
+                <option className="text-white" value="mais-de-50">
+                  Mais de 50
+                </option>
+                <option className="text-white" value="entre-21-50">
+                  Entre 21 a 50
+                </option>
+                <option className="text-white" value="entre-6-20">
+                  Entre 6 a 20
+                </option>
+                <option className="text-white" value="entre-1-5">
+                  Entre 1 a 5
+                </option>
+                <option
+                  className="text-white"
+                  value="ainda-nao-tenho-espaco-fisico"
+                >
                   Ainda não tenho espaço físico
                 </option>
               </select>
@@ -179,8 +234,7 @@ export function FormHome() {
                 alt=""
               />
             </button>
-          </div>
-          {/* </form> */}
+          </form>
         </div>
       </section>
     </>
