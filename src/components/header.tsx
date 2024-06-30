@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,8 +20,9 @@ const Header: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    // document.body.classList.toggle("no-scroll", !isOpen);
   };
+
+  const activedStyled = "text-white text-opacity-100 rounded-full";
 
   useEffect(() => {
     if (isOpen) {
@@ -29,23 +30,24 @@ const Header: React.FC = () => {
     } else {
       document.body.classList.remove("no-scroll");
     }
+
     return () => {
       document.body.classList.remove("no-scroll");
     };
   }, [isOpen]);
 
-  const activedStyled = "text-white text-opacity-100 rounded-full";
-
   return (
-    <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center">
+    <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
       <div className="container flex justify-between items-center">
-        <Image className="h-7" src={Logo} alt="logo da empresa" />
+        <div className="flex gap-4 items-center">
+          <Image className="h-7" src={Logo} alt="logo da empresa" />
+        </div>
 
-        <nav className="gap-4 hidden lg:flex font-bold">
+        <nav className="gap-4 hidden lg:flex font-bold text-base lg:text-[17px] xl:text-xl">
           {arryMenu.map((item, index) => (
             <Link
               key={index}
-              className={`px-4 py-2 text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
+              className={`py-2 text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
                 index === 0 ? activedStyled : ""
               }`}
               href="#"
@@ -69,7 +71,7 @@ const Header: React.FC = () => {
           onClick={toggleMenu}
         >
           <span
-            className={` block w-full h-1 bg-bg-line-cases transition-transform transform ${
+            className={`block w-full h-1 bg-bg-line-cases transition-transform transform ${
               isOpen ? "rotate-45 translate-y-2" : ""
             }`}
           ></span>
@@ -79,12 +81,13 @@ const Header: React.FC = () => {
             }`}
           ></span>
           <span
-            className={` block w-full h-1 bg-bg-line-cases transition-transform transform ${
+            className={`block w-full h-1 bg-bg-line-cases transition-transform transform ${
               isOpen ? "-rotate-45 -translate-y-[0.85rem]" : ""
             }`}
           ></span>
         </div>
       </div>
+
       <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} />
     </header>
   );

@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import LogoAvanti from "@/assets/logo.png";
 import LogoInstagram from "@/assets/logoInstagram.png";
 import LogoYouTube from "@/assets/logoYoutube.png";
 import LogoLinkedin from "@/assets/logoLinkedin.png";
+import IconeSetaRodape from "@/assets/extern-link.svg";
 
 export function Footer() {
   return (
@@ -17,7 +19,7 @@ export function Footer() {
               alt="Logo Avanti"
             />
 
-            <div className="flex flex-col gap-4 lg:min-w-[270px]">
+            <div className="flex flex-col gap-4 lg:min-w-[270px] text-base">
               <ul className="text-text-form-home max-w-[293px]">
                 <li className="text-white pb-2 pt-5 lg:pt-0">
                   FLORIANÓPOLIS - SC
@@ -41,19 +43,52 @@ export function Footer() {
             </div>
 
             <ul className="text-text-form-home">
-              <li className="text-white pb-4">Soluções para seu E-commerce</li>
-              <li className="pb-3">Digital Sales</li>
-              <li className="pb-3">Sales Performance</li>
-              <li className="pb-3">Experience</li>
+              <li className="text-white pb-4 text-base">
+                Soluções para seu E-commerce
+              </li>
+              <li className="pb-3 flex gap-2">
+                <Link href={"/digital-sales"}>Digital Sales</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"/performance"}>Sales Performance</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"/experience"}>Experience</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
             </ul>
 
             <ul className="text-text-form-home pb-6">
-              <li className="text-white pb-4">Avanti</li>
-              <li className="pb-3">Sobre nós</li>
-              <li className="pb-3">Cases</li>
-              <li className="pb-3">Carreiras</li>
-              <li className="pb-3">Políticas de Privacidade</li>
-              <li className="pb-3">Avanti Marketing Digital</li>
+              <li className="text-white pb-4 text-base">Avanti</li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"#"}>Sobre nós</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"#"}>Cases</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"#"}>Carreiras</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"#"}>Políticas de Privacidade</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
+
+              <li className="pb-3 flex gap-2">
+                <Link href={"#"}>Avanti Marketing Digital</Link>
+                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+              </li>
             </ul>
           </div>
 

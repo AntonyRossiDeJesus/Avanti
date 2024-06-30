@@ -55,22 +55,22 @@ export default function SucessCases() {
 
   return (
     <>
-      <section className="overflow-hidden flex justify-center items-center flex-col">
-        <div className="container xl:min-w-full flex flex-col xl:flex-row py-5 gap-x-5">
-          <div className="z-10 bg-white p-2 md:ml-12 xl:m-0 xl:min-w-[40%] xl:pl-28 2xl:max-w-[40%]">
+      <section className="overflow-hidden flex justify-center items-center flex-col pb-8">
+        <div className="container px-8 xl:min-w-full flex flex-col xl:flex-row py-5 gap-x-5">
+          <div className="z-10 bg-white  md:ml-12 xl:m-0 xl:min-w-[40%] xl:pl-28 2xl:max-w-[40%]">
             <h1 className="text-[28px] lg:text-4xl w-[80%] xl:text-5xl pb-4 xl:leading-[1.36] ">
               Explore nossos cases de
               <span className="text-text-primary"> sucesso</span>
             </h1>
 
-            <p className="opacity-65 pb-4 xl:text-xl">
+            <p className="opacity-65  pb-4 xl:text-xl">
               Nossos cases não são apenas exemplos de nosso trabalho, mas são a
               representação do impacto tangível que podemos ter no seu negócio.
               Explore e imagine o que podemos conquistar juntos.
             </p>
           </div>
 
-          <div className="relative flex w-full md:ml-12 gap-4 md:gap-10 lg:gap-24 xl:gap-4 xl:m-0 pl-2">
+          <div className="relative flex w-full md:ml-12 gap-4 md:gap-10 lg:gap-24 xl:gap-4 xl:m-0">
             <div
               className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[38%] transition-transform duration-500`}
               style={{

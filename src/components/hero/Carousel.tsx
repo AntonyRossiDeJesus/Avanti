@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import Smile from "@/assets/Smiles.png";

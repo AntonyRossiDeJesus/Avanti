@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Mouse from "@/assets/iconeBotaoBanner.png";
 import VideoBackground from "@/components/hero/VideoBackground";
 import Carousel from "@/components/hero/Carousel";
+
+import PopupAdicional from "@/components/popupHeader/popup";
 
 export default function Hero() {
   const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -15,6 +17,12 @@ export default function Hero() {
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  };
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
   };
 
   return (
@@ -28,8 +36,11 @@ export default function Hero() {
             Impulsione o e-commerce da sua empresa com soluções integradas,
             performance e experiência.
           </p>
-          <button className="bg-text-primary py-3 px-8 rounded-full">
-            Agendar uma apresentação
+          <button
+            className="bg-text-primary py-3 px-28 rounded-full popup-button"
+            onClick={togglePopup}
+          >
+            ATENÇÃO
           </button>
         </div>
 
@@ -52,6 +63,8 @@ export default function Hero() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-bg-primary via-transparent to-transparent z-10"></div>
 
       <VideoBackground />
+
+      <PopupAdicional isOpen={showPopup} togglePopup={togglePopup} />
     </section>
   );
 }

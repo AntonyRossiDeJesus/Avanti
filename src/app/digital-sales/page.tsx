@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function OrfeuDigital() {
+export default function DigitalSales() {
   return (
     <>
       <main>
         <section>
-          <div>ola Orfeu</div>
+          <div>ola DigitalSales</div>
           <Link href={"/"}>voltar para home</Link>
         </section>
       </main>
