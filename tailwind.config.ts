@@ -34,6 +34,7 @@ const config: Config = {
         "bg-navegation": "#1d242d",
         "text-form-home": "#8C9A9E",
         "bg-input-form-home": "#272e36",
+        "bg-footer": "#151A20",
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
         "bg-popup": "#101419",
