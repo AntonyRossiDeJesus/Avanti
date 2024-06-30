@@ -12,7 +12,7 @@ const arryMenuPopup = [
   { text: "Digital Sales", link: "/digital-sales", fontSize: "16px" },
   { text: "Sales Performance", link: "/performance", fontSize: "16px" },
   { text: "Experience", link: "/experience", fontSize: "16px" },
-  { text: "Cases", link: "/marketing-digital", fontSize: "22px" },
+  { text: "Cases", link: "#", fontSize: "22px" },
   { text: "Quem Somos", link: "#", fontSize: "22px" },
   { text: "Carreiras", link: "#", fontSize: "22px" },
   { text: "Marketing Digital", link: "#", fontSize: "22px" },
@@ -40,6 +40,10 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
     }
   }, [isOpen, arryMenuPopup]);
 
+  const handleLinkClick = () => {
+    toggleMenu();
+  };
+
   return (
     <div
       className={`fixed trans top-0 right-0 py-2 px-4 w-full h-full bg-bg-popup shadow-lg z-50 transition-transform transform duration-300 ${
@@ -55,6 +59,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
             className={`font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-10 transition-all duration-500 ${
               itemClasses[index] || ""
             }`}
+            onClick={handleLinkClick}
             href={item.link}
             style={{ fontSize: item.fontSize }}
           >
