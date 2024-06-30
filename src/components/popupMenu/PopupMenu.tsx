@@ -48,7 +48,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
       onClick={(event) => event.stopPropagation()}
     >
       <i className="flex items-start justify-start bg-no-repeat mb-10 bg-logoMax w-full h-16"></i>
-      <ul className="flex flex-col items-end justify-end gap-4 w-full h-auto text-black list-none px-6">
+      <ul className="flex flex-col items-end justify-end gap-4 w-full h-auto text-black list-none px-14">
         {arryMenuPopup.map((item, index) => (
           <Link
             key={index}
