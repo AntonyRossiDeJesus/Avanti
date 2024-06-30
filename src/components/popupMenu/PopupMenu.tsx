@@ -52,7 +52,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
         {arryMenuPopup.map((item, index) => (
           <Link
             key={index}
-            className={`font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-1 transition-all duration-500 ${
+            className={`font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-10 transition-all duration-500 ${
               itemClasses[index] || ""
             }`}
             href={item.link}
