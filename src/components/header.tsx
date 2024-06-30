@@ -3,25 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import Logo from "@/assets/logo.png";
 import PopupMenu from "@/components/popupMenu/PopupMenu";
 
-interface PopupMenuProps {
-  isOpen: boolean;
-  toggleMenu: () => void;
-  arryMenu: { text: string; link: string; fontSize: string }[];
-}
-
-const arryMenu = [
-  { text: "Serviços", link: "/servicos", fontSize: "22px" },
-  { text: "Cases", link: "/cases", fontSize: "20px" },
-  { text: "Quem Somos", link: "/quem-somos", fontSize: "18px" },
-  { text: "Carreira", link: "/carreira", fontSize: "16px" },
-  { text: "Marketing Digital", link: "/marketing-digital", fontSize: "24px" },
-];
-
-const Header: React.FC<PopupMenuProps> = () => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -40,7 +25,16 @@ const Header: React.FC<PopupMenuProps> = () => {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpen, arryMenu]);
+  }, [isOpen]);
+
+  // Array de menu para o header
+  const arryMenu = [
+    { text: "Serviços", link: "/servicos", fontSize: "22px" },
+    { text: "Cases", link: "/cases", fontSize: "20px" },
+    { text: "Quem Somos", link: "/quem-somos", fontSize: "18px" },
+    { text: "Carreira", link: "/carreira", fontSize: "16px" },
+    { text: "Marketing Digital", link: "/marketing-digital", fontSize: "24px" },
+  ];
 
   return (
     <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
@@ -94,6 +88,7 @@ const Header: React.FC<PopupMenuProps> = () => {
         </div>
       </div>
 
+      {/* Renderizando o PopupMenu com as propriedades necessárias */}
       <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} arryMenu={arryMenu} />
     </header>
   );

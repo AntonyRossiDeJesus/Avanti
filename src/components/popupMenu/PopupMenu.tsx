@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { FC, useEffect, useState } from "react";
+import Link from "next/link";
 
 interface PopupMenuProps {
   isOpen: boolean;
@@ -28,7 +28,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
       arryMenuPopup.forEach((_, index) => {
         timeouts.push(
           setTimeout(() => {
-            setItemClasses((prev) => [...prev, "opacity-100 translate-x-1"]);
+            setItemClasses((prev) => [...prev, "opacity-100 translate-x-2"]);
           }, index * 100)
         );
       });
@@ -52,7 +52,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
         {arryMenuPopup.map((item, index) => (
           <Link
             key={index}
-            className={` font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-full transition-all duration-500 ${
+            className={`font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-full transition-all duration-500 ${
               itemClasses[index] || ""
             }`}
             href={item.link}
