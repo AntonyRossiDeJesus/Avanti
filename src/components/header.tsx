@@ -7,15 +7,21 @@ import Link from "next/link";
 import Logo from "@/assets/logo.png";
 import PopupMenu from "@/components/popupMenu/PopupMenu";
 
+interface PopupMenuProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+  arryMenu: { text: string; link: string; fontSize: string }[];
+}
+
 const arryMenu = [
-  "Serviços",
-  "Cases",
-  "Quem Somos",
-  "Carreira",
-  "Marketing Digital",
+  { text: "Serviços", link: "/servicos", fontSize: "22px" },
+  { text: "Cases", link: "/cases", fontSize: "20px" },
+  { text: "Quem Somos", link: "/quem-somos", fontSize: "18px" },
+  { text: "Carreira", link: "/carreira", fontSize: "16px" },
+  { text: "Marketing Digital", link: "/marketing-digital", fontSize: "24px" },
 ];
 
-const Header: React.FC = () => {
+const Header: React.FC<PopupMenuProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -34,7 +40,7 @@ const Header: React.FC = () => {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpen]);
+  }, [isOpen, arryMenu]);
 
   return (
     <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
@@ -52,7 +58,7 @@ const Header: React.FC = () => {
               }`}
               href="#"
             >
-              {item}
+              {item.link}
             </Link>
           ))}
 
@@ -71,24 +77,24 @@ const Header: React.FC = () => {
           onClick={toggleMenu}
         >
           <span
-            className={`block w-full h-1 bg-bg-line-cases transition-transform transform ${
+            className={`block w-full h-1 bg-bg-line-cases transition-transform duration-300 transform ${
               isOpen ? "rotate-45 translate-y-2" : ""
             }`}
           ></span>
           <span
-            className={`block w-full h-1 bg-bg-line-cases transition-opacity ${
+            className={`block w-full h-1 bg-bg-line-cases transition-opacity duration-300 ${
               isOpen ? "opacity-0" : ""
             }`}
           ></span>
           <span
-            className={`block w-full h-1 bg-bg-line-cases transition-transform transform ${
+            className={`block w-full h-1 bg-bg-line-cases transition-transform duration-300 transform ${
               isOpen ? "-rotate-45 -translate-y-[0.85rem]" : ""
             }`}
           ></span>
         </div>
       </div>
 
-      <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+      <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} arryMenu={arryMenu} />
     </header>
   );
 };

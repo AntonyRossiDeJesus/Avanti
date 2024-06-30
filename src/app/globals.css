@@ -32,7 +32,8 @@
 
 .popup-button:hover,
 .popup-button:focus {
-  color: #01e800;
+  color: #000;
+  font-weight: 700;
   transform: translateY(-2px);
 }
 
