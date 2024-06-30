@@ -18,7 +18,7 @@ const arryMenu = [
   { text: "Marketing Digital", link: "#", fontSize: "22px" },
 ];
 
-const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu }) => {
+const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
   const [itemClasses, setItemClasses] = useState<string[]>([]);
 
   useEffect(() => {
