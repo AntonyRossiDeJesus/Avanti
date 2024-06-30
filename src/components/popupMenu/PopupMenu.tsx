@@ -7,7 +7,7 @@ interface PopupMenuProps {
   arryMenu: { text: string; link: string; fontSize: string }[];
 }
 
-const arryMenu = [
+const arryMenuPopup = [
   { text: "Serviços", link: "/servicos", fontSize: "22px" },
   { text: "Digital Sales", link: "/digital-sales", fontSize: "16px" },
   { text: "Sales Performance", link: "/performance", fontSize: "16px" },
@@ -25,10 +25,10 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
     if (isOpen) {
       const timeouts: NodeJS.Timeout[] = [];
       setItemClasses([]);
-      arryMenu.forEach((_, index) => {
+      arryMenuPopup.forEach((_, index) => {
         timeouts.push(
           setTimeout(() => {
-            setItemClasses((prev) => [...prev, "opacity-100 translate-x-2"]);
+            setItemClasses((prev) => [...prev, "opacity-100 translate-x-1"]);
           }, index * 100)
         );
       });
@@ -38,7 +38,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
     } else {
       setItemClasses([]);
     }
-  }, [isOpen, arryMenu]);
+  }, [isOpen, arryMenuPopup]);
 
   return (
     <div
@@ -49,7 +49,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
     >
       <i className="flex items-start justify-start bg-no-repeat mb-10 bg-logoMax w-full h-16"></i>
       <ul className="flex flex-col items-end justify-end gap-4 w-full h-auto text-black list-none px-6">
-        {arryMenu.map((item, index) => (
+        {arryMenuPopup.map((item, index) => (
           <Link
             key={index}
             className={` font-semibold hover:text-text-primary text-white opacity-0 transform translate-x-full transition-all duration-500 ${

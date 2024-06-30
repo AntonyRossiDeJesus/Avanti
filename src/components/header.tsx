@@ -56,9 +56,9 @@ const Header: React.FC<PopupMenuProps> = () => {
               className={`py-2 text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
                 index === 0 ? activedStyled : ""
               }`}
-              href="#"
+              href={item.link}
             >
-              {item.link}
+              {item.text}
             </Link>
           ))}
 
