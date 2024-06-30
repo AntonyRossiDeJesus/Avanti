@@ -7,7 +7,7 @@ import ImgCtoSaoJoao from "@/assets/ceo-farmacia-sao-joao.jpg";
 export function SaoJoao() {
   return (
     <>
-      <div className="w-full flex-col inline-block">
+      <div className="w-full flex-col">
         <div className="w-full">
           <Image
             className="max-h-16 w-[146px] object-contain mb-4 "

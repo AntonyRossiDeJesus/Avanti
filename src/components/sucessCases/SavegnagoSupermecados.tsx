@@ -25,7 +25,7 @@ export function SavegnagoCases() {
           ))}
         </nav>
 
-        <p className="xl:text-2xl">
+        <p className="lg:text-xl xl:text-2xl">
           Expertise da Avanti em supermercados transforma o digital do Savegnago
         </p>
       </div>

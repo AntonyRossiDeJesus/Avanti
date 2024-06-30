@@ -20,7 +20,7 @@ export function OrfeuCases() {
           ))}
         </nav>
 
-        <p className="xl:text-2xl p-2">
+        <p className="lg:text-xl xl:text-2xl p-2">
           Como a Orfeu transmitiu a essência da marca para o digital com a
           parceria da Avanti
         </p>

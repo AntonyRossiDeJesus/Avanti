@@ -13,7 +13,7 @@ export function FarmaciaSaoJoao() {
       <div className="pt-2 border-t w-[100%] ">
         <div className="relative bg-thumbcases3 bg-cover w-full pt-[100%] "></div>
 
-        <nav className="gap-3 w-full flex flex-wrap items-baseline font-bold py-2 px-4">
+        <nav className="gap-3 w-full flex flex-wrap items-baseline font-bold py-2">
           {arryThumbCases3.map((item, index) => (
             <Link
               key={index}
@@ -25,7 +25,7 @@ export function FarmaciaSaoJoao() {
           ))}
         </nav>
 
-        <p className="xl:text-2xl">
+        <p className="lg:text-xl xl:text-2xl">
           Como a Orfeu transmitiu a essência da marca para o digital com a
           parceria da Avanti
         </p>

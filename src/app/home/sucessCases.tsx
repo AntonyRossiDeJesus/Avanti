@@ -26,7 +26,7 @@ export default function SucessCases() {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => {
       if (is2XL) {
-        return prevIndex + 1 >= 2 ? 2 : prevIndex + 1;
+        return prevIndex + 1 >= 1 ? 1 : prevIndex + 1;
       } else {
         return (prevIndex + 1) % 3;
       }
@@ -57,22 +57,22 @@ export default function SucessCases() {
     <>
       <section className="overflow-hidden flex justify-center items-center flex-col">
         <div className="container xl:min-w-full flex flex-col xl:flex-row py-5 gap-x-5">
-          <div className="xl:min-w-[40%] px-4 z-10 bg-white p-2 xl:pl-28">
+          <div className="z-10 bg-white p-2 md:ml-12 xl:m-0 xl:min-w-[40%] xl:pl-28 2xl:max-w-[40%]">
             <h1 className="text-[28px] lg:text-4xl w-[80%] xl:text-5xl pb-4 xl:leading-[1.36] ">
               Explore nossos cases de
               <span className="text-text-primary"> sucesso</span>
             </h1>
 
-            <p className="opacity-65 pb-4">
+            <p className="opacity-65 pb-4 xl:text-xl">
               Nossos cases não são apenas exemplos de nosso trabalho, mas são a
               representação do impacto tangível que podemos ter no seu negócio.
               Explore e imagine o que podemos conquistar juntos.
             </p>
           </div>
 
-          <div className="relative flex w-full gap-1 md:gap-20 lg:gap-24 xl:gap-2 pl-2">
+          <div className="relative flex w-full md:ml-12 gap-4 md:gap-10 lg:gap-24 xl:gap-4 xl:m-0 pl-2">
             <div
-              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[38%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -81,7 +81,7 @@ export default function SucessCases() {
             </div>
 
             <div
-              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[38%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -90,7 +90,7 @@ export default function SucessCases() {
             </div>
 
             <div
-              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[40%] transition-transform duration-500`}
+              className={`flex min-w-[90%] md:min-w-[70%] lg:min-w-[60%] 2xl:min-w-[38%] transition-transform duration-500`}
               style={{
                 transform: `translateX(-${currentIndex * (is2XL ? 50 : 100)}%)`,
               }}
@@ -111,6 +111,7 @@ export default function SucessCases() {
             <button
               className="flex justify-center items-center rounded-full w-11 h-11 hover:border-l-2 hover:border-text-primary transition-all"
               onClick={handlePrev}
+              disabled={is2XL && currentIndex === 0} // Disable left arrow button when at the first image in 2XL
             >
               <Image
                 className="w-[54px] h-[58px]"
@@ -121,6 +122,7 @@ export default function SucessCases() {
             <button
               className="flex justify-center items-center rounded-full w-11 h-11 hover:border-r-2 hover:border-text-primary transition-all"
               onClick={handleNext}
+              disabled={is2XL && currentIndex === 1} // Disable right arrow button when at the second image in 2XL
             >
               <Image
                 className="w-[54px] h-[58px]"
