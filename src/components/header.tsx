@@ -27,13 +27,12 @@ const Header: React.FC = () => {
     };
   }, [isOpen]);
 
-  // Array de menu para o header
   const arryMenu = [
     { text: "Serviços", link: "/servicos", fontSize: "22px" },
-    { text: "Cases", link: "/cases", fontSize: "20px" },
-    { text: "Quem Somos", link: "/quem-somos", fontSize: "18px" },
-    { text: "Carreira", link: "/carreira", fontSize: "16px" },
-    { text: "Marketing Digital", link: "/marketing-digital", fontSize: "24px" },
+    { text: "Cases", link: "/cases", fontSize: "22px" },
+    { text: "Quem Somos", link: "/quem-somos", fontSize: "22px" },
+    { text: "Carreira", link: "/carreira", fontSize: "22px" },
+    { text: "Marketing Digital", link: "/marketing-digital", fontSize: "22px" },
   ];
 
   return (
@@ -88,7 +87,6 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Renderizando o PopupMenu com as propriedades necessárias */}
       <PopupMenu isOpen={isOpen} toggleMenu={toggleMenu} arryMenu={arryMenu} />
     </header>
   );
