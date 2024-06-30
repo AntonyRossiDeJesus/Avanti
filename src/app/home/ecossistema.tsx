@@ -13,7 +13,7 @@ export function Ecossistema() {
 
         <div className="container flex flex-col justify-center">
           <div className="px-5">
-            <p className="text-2xl lg:text-3xl 2xl:text-4xl">
+            <p className="text-2xl md:text-3xl lg:text-[44px] 2xl:text-6xl">
               Ecossistema <span className="text-text-primary">Avanti</span>
             </p>
             <p className="mt-4">

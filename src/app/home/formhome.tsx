@@ -54,38 +54,100 @@ export function FormHome() {
             </div>
 
             <div className="w-full flex lg:w-[49%] flex-col gap-4">
-              <label className="text-lg" htmlFor="">
+              <label className="text-lg" htmlFor="cargo">
                 Qual plataforma de E-commerce sua empresa utiliza?
               </label>
-              <select name="" id="">
-                Selecione uma opção
+              <select
+                name="cargo"
+                id="cargo"
+                className="p-[15px] bg-bg-input-form-home  text-text-form-home rounded-md
+                "
+              >
+                <option value="" disabled selected>
+                  Selecione uma opção
+                </option>
+                <option value="vtex-cms">VTEX CMS</option>
+                <option value="vtex-io">VTEX IO</option>
+                <option value="oracle">Oracle</option>
+                <option value="magento">Magento</option>
+                <option value="sap">SAP</option>
+                <option value="salesforce">SalesForce</option>
+                <option value="linx-commerce">Linx Commerce</option>
+                <option value="outros">Outros</option>
+                <option value="nao-tenho">Não tenho e-commerce ainda</option>
               </select>
             </div>
 
             <div className="w-full flex lg:w-[49%] flex-col gap-4">
-              <label className="text-lg" htmlFor="">
+              <label className="text-lg" htmlFor="cargo">
                 Qual seu cargo na empresa?
               </label>
-              <select name="" id="">
-                Selecione uma opção
+              <select
+                name="cargo"
+                id="cargo"
+                className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md"
+              >
+                <option value="" disabled selected>
+                  Selecione uma opção
+                </option>
+                <option value="presidente-ceo">Presidente/CEO</option>
+                <option value="gerente-ecommerce">Gerente de e-commerce</option>
+                <option value="c-level-diretor">C-Level/Diretor</option>
+                <option value="gerente-marketing">Gerente de marketing</option>
+                <option value="gerente-ti">Gerente de TI</option>
+                <option value="analista-ecommerce">
+                  Analista de e-commerce
+                </option>
+                <option value="analista-marketing">
+                  Analista de marketing
+                </option>
+                <option value="outros">Outros</option>
+                <option value="nao-tenho">Não tenho e-commerce ainda</option>
               </select>
             </div>
 
             <div className="w-full flex lg:w-[49%] flex-col gap-4">
-              <label className="text-lg" htmlFor="">
+              <label className="text-lg" htmlFor="quantidade-funcionarios">
                 Quantos funcionários sua empresa possui?
               </label>
-              <select name="" id="">
-                Selecione uma opção
+              <select
+                name="quantidade-funcionarios"
+                id="quantidade-funcionarios"
+                className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
+              >
+                <option value="" disabled selected>
+                  Selecione uma opção
+                </option>
+                <option value="mais-de-1000">Mais de 1.000</option>
+                <option value="entre-500-999">Entre 500 a 999</option>
+                <option value="entre-200-499">Entre 200 a 499</option>
+                <option value="entre-100-199">Entre 100 a 199</option>
+                <option value="menos-de-100">Menos de 100</option>
+                <option value="nao-tenho-funcionarios">
+                  Não tenho funcionários
+                </option>
               </select>
             </div>
 
             <div className="w-full flex lg:w-[49%] flex-col gap-4">
-              <label className="text-lg" htmlFor="">
+              <label className="text-lg" htmlFor="quantidade-lojas">
                 Quantas lojas sua empresa possui?
               </label>
-              <select name="" id="">
-                Selecione uma opção
+              <select
+                name="quantidade-lojas"
+                id="quantidade-lojas"
+                className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
+              >
+                <option value="" disabled selected>
+                  Selecione uma opção
+                </option>
+                <option value="mais-de-50">Mais de 50</option>
+                <option value="entre-21-50">Entre 21 a 50</option>
+                <option value="entre-6-20">Entre 6 a 20</option>
+                <option value="entre-1-5">Entre 1 a 5</option>
+                <option value="ainda-nao-tenho-espaco-fisico">
+                  Ainda não tenho espaço físico
+                </option>
               </select>
             </div>
 
@@ -94,7 +156,7 @@ export function FormHome() {
                 Telefone
               </label>
               <input
-                className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md"
+                className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md appearance-none"
                 type="number"
                 placeholder="(00)0000 0000"
               />
@@ -103,11 +165,13 @@ export function FormHome() {
             <div className="w-full flex lg:w-[100%]  flex-col gap-4">
               <label className="text-lg flex gap-2" htmlFor="">
                 <input type="checkbox" placeholder="Nome e Sobrenome" />
-                <span>Aceito uso dos termos e condições</span>
+                <span className="text-base">
+                  Aceito uso dos termos e condições
+                </span>
               </label>
             </div>
 
-            <button className="bg-text-primary py-2 px-5 rounded-full cursor-pointer flex justify-center gap-2 my-4 text-white w-[60%] sm:w-[50%] lg:w-[30%] xl:w-[20%]">
+            <button className="bg-text-primary py-2 px-5 rounded-full cursor-pointer flex justify-center gap-2 my-4 text-white max-w-[237px] sm:w-[50%] lg:w-[30%] xl:w-[20%]">
               Solicitar uma proposta
               <Image
                 className="w-[24px] h-[24px] text-white"

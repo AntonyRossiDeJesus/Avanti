@@ -100,7 +100,7 @@ export default function SucessCases() {
           </div>
         </div>
 
-        <div className="container py-4 px-8 flex items-center justify-end gap-x-4">
+        <div className="container py-4 px-8 md:py-10 xl:py-20 flex items-center justify-end gap-x-4">
           <div className="flex items-center w-[60%] lg:w-[500px] h-[4px]">
             <button className={`h-1 w-full ${getButtonClass(0)}`}></button>
             <button className={`h-1 w-full ${getButtonClass(1)}`}></button>
@@ -111,7 +111,7 @@ export default function SucessCases() {
             <button
               className="flex justify-center items-center rounded-full w-11 h-11 hover:border-l-2 hover:border-text-primary transition-all"
               onClick={handlePrev}
-              disabled={is2XL && currentIndex === 0} // Disable left arrow button when at the first image in 2XL
+              disabled={is2XL && currentIndex === 0}
             >
               <Image
                 className="w-[54px] h-[58px]"
@@ -122,7 +122,7 @@ export default function SucessCases() {
             <button
               className="flex justify-center items-center rounded-full w-11 h-11 hover:border-r-2 hover:border-text-primary transition-all"
               onClick={handleNext}
-              disabled={is2XL && currentIndex === 1} // Disable right arrow button when at the second image in 2XL
+              disabled={is2XL && currentIndex === 1}
             >
               <Image
                 className="w-[54px] h-[58px]"
