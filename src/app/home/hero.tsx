@@ -8,7 +8,7 @@ import Mouse from "@/assets/iconeBotaoBanner.png";
 import VideoBackground from "@/components/hero/VideoBackground";
 import Carousel from "@/components/hero/Carousel";
 
-import PopupAdicional from "@/components/popupHeader/popup";
+import PopupAdicional from "@/components/popupHero/popup";
 
 export default function Hero() {
   const scrollToSection = (event: React.MouseEvent<HTMLAnchorElement>) => {

@@ -39,7 +39,9 @@ const Header: React.FC = () => {
     <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
       <div className="container flex justify-between items-center">
         <div className="flex gap-4 items-center">
-          <Image className="h-7" src={Logo} alt="logo da empresa" />
+          <a target="_blank" href="https://penseavanti.com.br/">
+            <Image className="h-7" src={Logo} alt="logo da empresa" />
+          </a>
         </div>
 
         <nav className="gap-4 hidden lg:flex font-bold text-base lg:text-[17px] xl:text-xl">

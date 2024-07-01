@@ -1,5 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+import LogoMax from "@/assets/LOGO1-MAX.svg";
 
 interface PopupMenuProps {
   isOpen: boolean;
@@ -51,7 +54,14 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
       }`}
       onClick={(event) => event.stopPropagation()}
     >
-      <i className="flex items-start justify-start bg-no-repeat mb-10 bg-logoMax w-full h-16"></i>
+      <a
+        className="flex mb-10 max-w-[20%] h-16 hover:scale-95"
+        target="_blank"
+        href="https://maxdesigns.com.br/"
+      >
+        <Image src={LogoMax} alt="" />
+      </a>
+
       <ul className="flex flex-col items-end justify-end gap-4 w-full h-auto text-black list-none px-14">
         {arryMenuPopup.map((item, index) => (
           <Link
