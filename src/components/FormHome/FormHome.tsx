@@ -31,9 +31,7 @@ export function FormHome() {
     resolver: zodResolver(dadosSchema),
   });
 
-  function OnSubimit(data: dadosSchema) {
-    console.log(data);
-  }
+  function OnSubimit(data: dadosSchema) {}
 
   return (
     <form

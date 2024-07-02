@@ -15,7 +15,16 @@ const config: Config = {
         logoMax: "url('../assets/LOGO1-MAX.svg')",
         bgEcossistema: "url('../assets/ecosystem.png')",
         bgHeroDigitalCases: "url('../assets/banner-tecnologia-webp.webp')",
+        "custom-gradient": "linear-gradient(to bottom, #151A20, transparent)",
+        "background-image-digital-sales-page":
+          "linear-gradient(to top, #151A20, transparent), url('../assets/quadrante-1-png-test.webp')",
+        "background-image-digital-sales-page2":
+          "url('../assets/quadrante-1-png-test2.webp')",
       },
+
+      // borderImage: {
+      //   "custom-gradient": "linear-gradient(to bottom, #1D242D, transparent) 1",
+      // },
 
       backgroundSize: {
         auto: "auto",
@@ -39,6 +48,7 @@ const config: Config = {
         "text-primary": "#005CFF",
         "text-secundary": "#979a93",
         "bg-popup": "#101419",
+        "text-digital-sales-page": "#4a5057",
       },
     },
   },
