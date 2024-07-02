@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        thumbcases: "url('../assets/thum-site-case.png')",
-        thumbcases2: "url('../assets/thumb-case-site-1.jpg')",
+        thumbcases: "url('../assets/thum-site-case-webp.webp')",
+        thumbcases2: "url('../assets/thumb-case-site-1-webp.webp')",
         thumbcases3: "url('../assets/thumb-sao-joaao.png')",
         logoMax: "url('../assets/LOGO1-MAX.svg')",
         bgEcossistema: "url('../assets/ecosystem.png')",

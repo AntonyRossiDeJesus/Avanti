@@ -102,14 +102,20 @@ export default function SucessCases() {
 
         <div className="container py-4 px-8 md:py-10 xl:py-20 flex items-center justify-end gap-x-4">
           <div className="flex items-center w-[60%] lg:w-[500px] h-[4px]">
-            <button className={`h-1 w-full ${getButtonClass(0)}`}></button>
-            <button className={`h-1 w-full ${getButtonClass(1)}`}></button>
-            <button className={`h-1 w-full ${getButtonClass(2)}`}></button>
+            <button
+              className={`h-1 cursor-default w-full ${getButtonClass(0)}`}
+            ></button>
+            <button
+              className={`h-1 cursor-default w-full ${getButtonClass(1)}`}
+            ></button>
+            <button
+              className={`h-1 cursor-default w-full ${getButtonClass(2)}`}
+            ></button>
           </div>
 
           <div className="flex gap-x-4">
             <button
-              className="flex justify-center items-center rounded-full w-11 h-11 hover:border-l-2 hover:border-text-primary transition-all"
+              className="flex justify-center items-center rounded-full w-11 h-11 hover:border-l-2 hover:border-text-primary transition-all "
               onClick={handlePrev}
               disabled={is2XL && currentIndex === 0}
             >

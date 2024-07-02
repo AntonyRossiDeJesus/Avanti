@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import EmailIcon from "@/assets/EmailIcon.svg";
-import bgsection from "@/assets/ecosystem.png";
+import bgsection from "@/assets/ecosystem-webp.webp";
 
 export function Ecossistema() {
   return (

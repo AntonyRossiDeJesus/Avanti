@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import ImgInspecialista from "@/assets/bg-popup.webp";
-import AvatarAntony from "@/assets/avatarAntony.jpeg";
+import AvatarAntony from "@/assets/avatarAntony-webp.webp";
 import IconeSetaLink from "@/assets/extern-link.svg";
 
 interface PopupAdicionalProps {

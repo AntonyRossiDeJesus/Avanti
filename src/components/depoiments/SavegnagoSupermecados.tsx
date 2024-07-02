@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import SavegnagoImg from "@/assets/Savegnago-e1717019369635.png";
 
-import ImgVanessa from "@/assets/vanessa.jpg";
+import ImgVanessa from "@/assets/vanessa-webp.webp";
 
 export function SavegnagoSupermecados() {
   return (

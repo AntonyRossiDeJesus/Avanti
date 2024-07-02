@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import SaoJoaoImg from "@/assets/Logo-Farmacias-Sao-Joao-Positiva.png";
 
-import ImgCtoSaoJoao from "@/assets/ceo-farmacia-sao-joao.jpg";
+import ImgCtoSaoJoao from "@/assets/ceo-farmacia-sao-joao-webp.webp";
 
 export function SaoJoao() {
   return (

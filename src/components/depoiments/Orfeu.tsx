@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import OrfeuImg from "@/assets/Orfeu-Horizontal-Negativo-1.svg";
 
-import ImgIsabela from "@/assets/isabela.jpg";
+import ImgIsabela from "@/assets/isabela-webp.webp";
 
 export function Orfeu() {
   return (
