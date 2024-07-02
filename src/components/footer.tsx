@@ -66,27 +66,31 @@ export function Footer() {
               <li className="text-white pb-4 text-base">Avanti</li>
 
               <li className="pb-3 flex gap-2">
-                <Link href={"#"}>Sobre nós</Link>
+                <Link href={"/quem-somos"}>Sobre nós</Link>
                 <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
               </li>
 
               <li className="pb-3 flex gap-2">
-                <Link href={"#"}>Cases</Link>
+                <Link href={"/cases"}>Cases</Link>
                 <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
               </li>
 
               <li className="pb-3 flex gap-2">
-                <Link href={"#"}>Carreiras</Link>
+                <Link href={"/carreiras"}>Carreiras</Link>
                 <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
               </li>
 
               <li className="pb-3 flex gap-2">
-                <Link href={"#"}>Políticas de Privacidade</Link>
+                <Link href={"/politica-de-privacidade"}>
+                  Políticas de Privacidade
+                </Link>
                 <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
               </li>
 
               <li className="pb-3 flex gap-2">
-                <Link href={"#"}>Avanti Marketing Digital</Link>
+                <Link href={"/marketing-digital"}>
+                  Avanti Marketing Digital
+                </Link>
                 <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
               </li>
             </ul>

@@ -1,12 +1,15 @@
-import Link from "next/link";
+"use client";
+
+import ConstructionAnimation from "@/components/manutencao/paginaEmConstrucao";
 
 export default function Soluctions() {
   return (
     <>
       <main>
         <section>
-          <div>ola Soluctions</div>
-          <Link href={"/"}>voltar para home</Link>
+          <div>
+            <ConstructionAnimation />
+          </div>
         </section>
       </main>
     </>

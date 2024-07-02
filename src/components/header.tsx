@@ -31,7 +31,7 @@ const Header: React.FC = () => {
     { text: "Serviços", link: "/servicos", fontSize: "22px" },
     { text: "Cases", link: "/cases", fontSize: "22px" },
     { text: "Quem Somos", link: "/quem-somos", fontSize: "22px" },
-    { text: "Carreira", link: "/carreira", fontSize: "22px" },
+    { text: "Carreiras", link: "/carreiras", fontSize: "22px" },
     { text: "Marketing Digital", link: "/marketing-digital", fontSize: "22px" },
   ];
 
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           </a>
         </div>
 
-        <nav className="gap-4 hidden lg:flex font-bold text-base lg:text-[17px] xl:text-xl">
+        <nav className="gap-4 hidden lg:flex font-bold text-base lg:text-[17px] xl:text-xl xl:gap-10">
           {arryMenu.map((item, index) => (
             <Link
               key={index}

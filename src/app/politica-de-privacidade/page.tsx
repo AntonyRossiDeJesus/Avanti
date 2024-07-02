@@ -2,7 +2,7 @@
 
 import ConstructionAnimation from "@/components/manutencao/paginaEmConstrucao";
 
-export default function OrfeuDigital() {
+export default function PoliticaDePrivacidade() {
   return (
     <>
       <main>

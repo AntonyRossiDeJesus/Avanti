@@ -22,7 +22,7 @@ export function DigitalSales() {
               <Link
                 key={index}
                 className={`px-4 py-2 text-xs md:text-sm lg:text-xl font-normal text-black bg-bg-soluctions transition-all rounded-full`}
-                href={"/soluctions"}
+                href={"/digital-sales"}
               >
                 {item}
               </Link>

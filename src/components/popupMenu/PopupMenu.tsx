@@ -15,10 +15,10 @@ const arryMenuPopup = [
   { text: "Digital Sales", link: "/digital-sales", fontSize: "16px" },
   { text: "Sales Performance", link: "/performance", fontSize: "16px" },
   { text: "Experience", link: "/experience", fontSize: "16px" },
-  { text: "Cases", link: "#", fontSize: "22px" },
-  { text: "Quem Somos", link: "#", fontSize: "22px" },
-  { text: "Carreiras", link: "#", fontSize: "22px" },
-  { text: "Marketing Digital", link: "#", fontSize: "22px" },
+  { text: "Cases", link: "/cases", fontSize: "22px" },
+  { text: "Quem Somos", link: "/quem-somos", fontSize: "22px" },
+  { text: "Carreiras", link: "/carreiras", fontSize: "22px" },
+  { text: "Marketing Digital", link: "/marketing-digital", fontSize: "22px" },
 ];
 
 const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {

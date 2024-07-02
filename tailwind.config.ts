@@ -14,6 +14,7 @@ const config: Config = {
         thumbcases3: "url('../assets/thumb-sao-joaao.png')",
         logoMax: "url('../assets/LOGO1-MAX.svg')",
         bgEcossistema: "url('../assets/ecosystem.png')",
+        bgHeroDigitalCases: "url('../assets/banner-tecnologia-webp.webp')",
       },
 
       backgroundSize: {

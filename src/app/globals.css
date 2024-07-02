@@ -75,6 +75,16 @@
   }
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .ecossystem-wrapper {
     background-position: -2.5rem 0 !important;

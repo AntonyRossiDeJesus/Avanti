@@ -1,12 +1,15 @@
-import Link from "next/link";
+"use client";
+
+import ConstructionAnimation from "@/components/manutencao/paginaEmConstrucao";
 
 export default function Experience() {
   return (
     <>
       <main>
         <section>
-          <div>ola Experience</div>
-          <Link href={"/"}>voltar para home</Link>
+          <div>
+            <ConstructionAnimation />
+          </div>
         </section>
       </main>
     </>
