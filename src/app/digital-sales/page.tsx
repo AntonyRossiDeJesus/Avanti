@@ -3,6 +3,8 @@ import DigitalSalesSectionTwo from "@/components/digital-sales/section-two";
 import { SectionFormHome } from "../home/formhome";
 import DigitalSalesSectionThree from "@/components/digital-sales/section-three";
 import { DigitalSalesSectionFor } from "@/components/digital-sales/section-for";
+import { SucessCasesDigitalSales } from "@/components/digital-sales/section-five";
+import SoluctionsDigitalSalesPage from "@/components/digital-sales/section-six";
 
 export default function DigitalSalesPage() {
   return (
@@ -12,6 +14,8 @@ export default function DigitalSalesPage() {
         <DigitalSalesSectionTwo />
         <DigitalSalesSectionThree />
         <DigitalSalesSectionFor />
+        <SucessCasesDigitalSales />
+        <SoluctionsDigitalSalesPage />
         <SectionFormHome />
       </main>
     </>

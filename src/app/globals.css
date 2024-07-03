@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.zindex-full {
+  z-index: 9999;
+}
+
 .no-scroll {
   overflow: hidden;
 }

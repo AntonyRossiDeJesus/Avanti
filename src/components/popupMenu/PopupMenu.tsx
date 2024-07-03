@@ -49,7 +49,7 @@ const PopupMenu: FC<PopupMenuProps> = ({ isOpen, toggleMenu, arryMenu }) => {
 
   return (
     <div
-      className={`fixed trans top-0 right-0 py-2 px-4 w-full h-full bg-bg-popup shadow-lg z-50 transition-transform transform duration-300 ${
+      className={`fixed trans top-0 right-0 py-2 px-4 w-full h-full bg-bg-popup shadow-lg z-[999] transition-transform transform duration-300 ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
       onClick={(event) => event.stopPropagation()}

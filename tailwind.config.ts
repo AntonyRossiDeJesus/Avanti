@@ -22,6 +22,7 @@ const config: Config = {
           "url('../assets/bg-projecao-avanti.jpg')",
         "custom-gradient-hero-ds":
           "linear-gradient(to bottom, #02101F, transparent)",
+        bgCasesDigitalCases: "url('../assets/service1-webp.webp')",
       },
 
       backgroundSize: {

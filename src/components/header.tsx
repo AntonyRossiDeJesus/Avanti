@@ -36,19 +36,19 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-bg-primary w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
-      <div className="container flex justify-between items-center">
-        <div className="flex gap-4 items-center">
+    <header className="bg-bg-primary text-white w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
+      <div className="container flex justify-between items-center text-white">
+        <div className="flex gap-4 items-center ">
           <a target="_blank" href="https://penseavanti.com.br/">
             <Image className="h-7" src={Logo} alt="logo da empresa" />
           </a>
         </div>
 
-        <nav className="gap-4 hidden lg:flex font-bold text-base lg:text-[17px] xl:text-xl xl:gap-10">
+        <nav className="gap-4 hidden zindex-full lg:flex font-bold text-base lg:text-[17px] xl:text-xl xl:gap-10 text-white">
           {arryMenu.map((item, index) => (
             <Link
               key={index}
-              className={`py-2 text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
+              className={`py-2 z-[999] text-white hover:text-text-primary text-opacity-60 hover:text-opacity-100 transition-all ${
                 index === 0 ? activedStyled : ""
               }`}
               href={item.link}
