@@ -48,17 +48,29 @@ export function Footer() {
               </li>
               <li className="pb-3 flex gap-2">
                 <Link href={"/digital-sales"}>Digital Sales</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/performance"}>Sales Performance</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/experience"}>Experience</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
             </ul>
 
@@ -67,31 +79,51 @@ export function Footer() {
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/quem-somos"}>Sobre nós</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/cases"}>Cases</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/carreiras"}>Carreiras</Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/politica-de-privacidade"}>
                   Políticas de Privacidade
                 </Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
 
               <li className="pb-3 flex gap-2">
                 <Link href={"/marketing-digital"}>
                   Avanti Marketing Digital
                 </Link>
-                <Image src={IconeSetaRodape} alt="Icone seta link rodapé" />
+                <Image
+                  className="w-5 h-5"
+                  src={IconeSetaRodape}
+                  alt="Icone seta link rodape"
+                />
               </li>
             </ul>
           </div>

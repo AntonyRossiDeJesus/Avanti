@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
 import MensagemIcon from "@/assets/mensagemIcon.png";
-
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -31,19 +29,22 @@ export function FormHome() {
     resolver: zodResolver(dadosSchema),
   });
 
-  function OnSubimit(data: dadosSchema) {}
+  function onSubmit(data: dadosSchema) {
+    console.log(data);
+  }
 
   return (
     <form
-      onSubmit={handleSubmit(OnSubimit)}
+      onSubmit={handleSubmit(onSubmit)}
       action=""
       className="flex flex-col lg:flex-row lg:flex-wrap gap-4"
     >
       <div className="w-full lg:w-[49%] flex flex-col gap-4">
-        <label className="text-lg" htmlFor="">
+        <label className="text-lg" htmlFor="name">
           Nome
         </label>
         <input
+          id="name"
           className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md"
           type="text"
           placeholder="Nome e Sobrenome"
@@ -55,10 +56,11 @@ export function FormHome() {
       </div>
 
       <div className="w-full lg:w-[49%] flex flex-col gap-4">
-        <label className="text-lg" htmlFor="">
+        <label className="text-lg" htmlFor="email">
           E-mail
         </label>
         <input
+          id="email"
           className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md"
           type="email"
           placeholder="E-mail para contato"
@@ -70,32 +72,32 @@ export function FormHome() {
       </div>
 
       <div className="w-full flex lg:w-[49%] flex-col gap-4">
-        <label className="text-lg" htmlFor="">
+        <label className="text-lg" htmlFor="nomeEmpresa">
           Nome da Empresa
         </label>
         <input
+          id="nomeEmpresa"
           className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md"
           type="text"
           placeholder="Digite o nome da sua empresa"
           {...register("nomeEmpresa")}
         />
-
         {errors.nomeEmpresa && (
           <span className="text-red-500 text-base">Campo obrigatório</span>
         )}
       </div>
 
       <div className="w-full flex lg:w-[49%] flex-col gap-4">
-        <label className="text-lg" htmlFor="cargo">
+        <label className="text-lg" htmlFor="plataforma">
           Qual plataforma de E-commerce sua empresa utiliza?
         </label>
         <select
-          {...register("plataforma")}
           id="plataforma"
-          className="p-[15px] bg-bg-input-form-home  text-text-form-home rounded-md
-                "
+          {...register("plataforma")}
+          className="p-[15px] bg-bg-input-form-home  text-text-form-home rounded-md"
+          defaultValue=""
         >
-          <option className="text-text-form-home" selected value="">
+          <option className="text-text-form-home" value="">
             Selecione uma opção
           </option>
           <option className="text-white" value="vtex-cms">
@@ -136,11 +138,12 @@ export function FormHome() {
           Qual seu cargo na empresa?
         </label>
         <select
-          {...register("cargo")}
           id="cargo"
+          {...register("cargo")}
           className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md"
+          defaultValue=""
         >
-          <option className="text-text-form-home" value="" selected>
+          <option className="text-text-form-home" value="">
             Selecione uma opção
           </option>
           <option className="text-white" value="presidente-ceo">
@@ -181,11 +184,12 @@ export function FormHome() {
           Quantas lojas sua empresa possui?
         </label>
         <select
-          {...register("qntLojas")}
           id="quantidade-lojas"
+          {...register("qntLojas")}
           className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
+          defaultValue=""
         >
-          <option className="text-text-form-home" value="" selected>
+          <option className="text-text-form-home" value="">
             Selecione uma opção
           </option>
           <option className="text-white" value="mais-de-50">
@@ -214,30 +218,28 @@ export function FormHome() {
           Quantos funcionários sua empresa possui?
         </label>
         <select
-          {...register("qntFuncionarios")}
           id="quantidade-funcionarios"
+          {...register("qntFuncionarios")}
           className="p-[15px] pr-10 bg-bg-input-form-home text-text-form-home rounded-md custom-select"
+          defaultValue=""
         >
-          <option className="text-text-form-home" value="" selected>
+          <option className="text-text-form-home" value="">
             Selecione uma opção
           </option>
           <option className="text-white" value="mais-de-1000">
-            Mais de 1.000
+            Mais de 1000
           </option>
-          <option className="text-white" value="entre-500-999">
-            Entre 500 a 999
+          <option className="text-white" value="entre-501-1000">
+            Entre 501 a 1000
           </option>
-          <option className="text-white" value="entre-200-499">
-            Entre 200 a 499
+          <option className="text-white" value="entre-101-500">
+            Entre 101 a 500
           </option>
-          <option className="text-white" value="entre-100-199">
-            Entre 100 a 199
+          <option className="text-white" value="entre-11-100">
+            Entre 11 a 100
           </option>
-          <option className="text-white" value="menos-de-100">
-            Menos de 100
-          </option>
-          <option className="text-white" value="nao-tenho-funcionarios">
-            Não tenho funcionários
+          <option className="text-white" value="entre-1-10">
+            Entre 1 a 10
           </option>
         </select>
         {errors.qntFuncionarios && (
@@ -245,45 +247,42 @@ export function FormHome() {
         )}
       </div>
 
-      <div className="w-full flex lg:w-[49%] flex-col gap-4">
-        <label className="text-lg" htmlFor="">
-          Telefone
+      <div className="w-full flex flex-col gap-4 lg:w-[49%]">
+        <label className="text-lg" htmlFor="telefone">
+          Telefone com DDD
         </label>
         <input
+          id="telefone"
+          className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md"
+          type="text"
+          placeholder="(XX) XXXX-XXXX"
           {...register("telefone")}
-          className="p-[15px] bg-bg-input-form-home text-text-form-home rounded-md appearance-none"
-          type="number"
-          placeholder="(00) 0.0000 0000"
         />
         {errors.telefone && (
           <span className="text-red-500 text-base">Campo obrigatório</span>
         )}
       </div>
 
-      <div className="w-full flex lg:w-[100%] gap-4">
-        <input
-          {...register("checkBox")}
-          type="checkbox"
-          placeholder="Nome e Sobrenome"
-        />
-        <label className="text-lg flex gap-2" htmlFor="">
-          Aceito uso dos termos e condições
-        </label>
-        {errors.checkBox && (
-          <span className="text-red-500 text-base">Campo obrigatório</span>
-        )}
+      <div className="w-full flex flex-col gap-4">
+        <div className="flex items-center gap-4">
+          <input
+            id="checkbox"
+            type="checkbox"
+            className="w-5 h-5 accent-[#005CFF] bg-gray-100 rounded "
+            {...register("checkBox")}
+          />
+          <label className="text-sm lg:text-lg" htmlFor="checkbox">
+            Aceito uso dos termos e condições
+          </label>
+        </div>
       </div>
 
       <button
-        className="bg-text-primary py-2 px-5 rounded-full cursor-pointer flex justify-center gap-2 my-4 text-white max-w-[237px] sm:w-[50%] lg:w-[30%] xl:w-[20%]"
+        className="w-full max-w-[250px] flex items-center justify-center px-5 py-2 bg-text-primary text-white text-base rounded-full gap-4 lg:w-[22rem]"
         type="submit"
       >
         Solicitar uma proposta
-        <Image
-          className="w-[24px] h-[24px] text-white"
-          src={MensagemIcon}
-          alt=""
-        />
+        <Image className="w-6 h-6" src={MensagemIcon} alt="Ícone de mensagem" />
       </button>
     </form>
   );

@@ -14,11 +14,9 @@ export function SalesPerformanceDigitalSalesPage() {
       <div className="w-full flex flex-col justify-center items-center gap-4 bg-bg-implantacao px-4 py-8 rounded-3xl">
         <div className=" w-full p-4 rounded-t-lg ">
           <p>
-            <p>
-              Transforme visitantes em clientes e potencialize o retorno sobre
-              investimento do seu e-commerce por meio de estratégias de tráfego
-              pago, SEO, personalização e CRM.
-            </p>
+            Transforme visitantes em clientes e potencialize o retorno sobre
+            investimento do seu e-commerce por meio de estratégias de tráfego
+            pago, SEO, personalização e CRM.
           </p>
         </div>
       </div>

@@ -28,8 +28,8 @@ const Header: React.FC = () => {
   }, [isOpen]);
 
   const arryMenu = [
-    { text: "Serviços", link: "/servicos", fontSize: "22px" },
-    { text: "Cases", link: "/cases", fontSize: "22px" },
+    { text: "Serviços", link: "/digital-sales", fontSize: "22px" },
+    { text: "Cases", link: "/digital-sales", fontSize: "22px" },
     { text: "Quem Somos", link: "/quem-somos", fontSize: "22px" },
     { text: "Carreiras", link: "/carreiras", fontSize: "22px" },
     { text: "Marketing Digital", link: "/marketing-digital", fontSize: "22px" },
@@ -39,9 +39,9 @@ const Header: React.FC = () => {
     <header className="bg-bg-primary text-white w-full px-8 h-[88px] flex items-center justify-center overflow-x-hidden">
       <div className="container flex justify-between items-center text-white">
         <div className="flex gap-4 items-center ">
-          <a target="_blank" href="https://penseavanti.com.br/">
+          <Link href={"/"}>
             <Image className="h-7" src={Logo} alt="logo da empresa" />
-          </a>
+          </Link>
         </div>
 
         <nav className="gap-4 hidden zindex-full lg:flex font-bold text-base lg:text-[17px] xl:text-xl xl:gap-10 text-white">

@@ -27,7 +27,7 @@ const ConstructionAnimation: React.FC = () => {
           alt="Personagem em construção"
           layout="fill"
           objectFit="contain"
-          className="transition-transform duration-300"
+          className="transition-transform duration-300 w-36 h-32"
         />
       </div>
       <div className="mt-4 text-lg font-semibold text-gray-700">

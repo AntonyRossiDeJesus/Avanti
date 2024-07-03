@@ -13,11 +13,9 @@ export function SalesExperienceDigitalSalesPage() {
       <div className="w-full flex flex-col justify-center items-center gap-4 bg-bg-implantacao px-4 py-8 rounded-3xl">
         <div className=" w-full p-4 rounded-t-lg ">
           <p>
-            <p>
-              Combinamos conhecimento, metodologias de evolução, soluções de
-              personalização, dados, para garantir a melhor experiência do
-              cliente.
-            </p>
+            Combinamos conhecimento, metodologias de evolução, soluções de
+            personalização, dados, para garantir a melhor experiência do
+            cliente.
           </p>
         </div>
       </div>
