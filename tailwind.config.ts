@@ -17,14 +17,12 @@ const config: Config = {
         bgHeroDigitalCases: "url('../assets/banner-tecnologia-webp.webp')",
         "custom-gradient": "linear-gradient(to bottom, #151A20, transparent)",
         "background-image-digital-sales-page":
-          "linear-gradient(to top, #151A20, transparent), url('../assets/quadrante-1-png-test.webp')",
+          "linear-gradient(to bottom, transparent, #151A20), url('../assets/quadrante-1-png-test.webp')",
         "background-image-digital-sales-page2":
-          "url('../assets/quadrante-1-png-test2.webp')",
+          "url('../assets/bg-projecao-avanti.jpg')",
+        "custom-gradient-hero-ds":
+          "linear-gradient(to bottom, #02101F, transparent)",
       },
-
-      // borderImage: {
-      //   "custom-gradient": "linear-gradient(to bottom, #1D242D, transparent) 1",
-      // },
 
       backgroundSize: {
         auto: "auto",

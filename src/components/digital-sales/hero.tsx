@@ -5,9 +5,9 @@ import SetaIconDireita from "@/assets/SetaDireita-Digital-sales.svg";
 export default function DigitalSalesHero() {
   return (
     <>
-      <section className="w-full bg-cover bg-no-repeat bg-bgHeroDigitalCases pt-32 md:pt-0 md:h-[754px] lg:bg-bottom xl:bg-center">
-        <div className="container text-white min-h-[600px] w-full sm:w-[510px] lg:w-[645px] xl:w-[706px] flex flex-col justify-center items-center gap-10 py-20 md:py-52 px-8 m-auto lg:mr-24">
-          <div className="flex flex-col sm:w-full gap-4 md:min-w-[600px] 2xl:-ml-[400px]">
+      <section className="w-full relative bg-cover bg-no-repeat bg-bgHeroDigitalCases pt-32 md:pt-0 md:h-[754px] lg:bg-bottom xl:bg-center">
+        <div className="container text-white min-h-[600px] w-full sm:w-[510px] lg:w-[645px] xl:w-[706px] flex flex-col justify-center items-center gap-10 py-20 md:py-52 px-8 m-auto lg:mr-24 ">
+          <div className="flex flex-col sm:w-full gap-4 md:min-w-[600px] 2xl:-ml-[400px] z-50">
             <h1 className="text-[26px] font-bold sm:text-4xl max-w-[320px] sm:min-w-full md:text-5xl">
               Tecnologia e experiência para construir o futuro do seu e-commerce
             </h1>
@@ -32,6 +32,8 @@ export default function DigitalSalesHero() {
             </div>
           </div>
         </div>
+
+        <div className="absolute right-0 left-0 top-0 bg-contain p-[20%] bg-custom-gradient-hero-ds z-10 max-h-[900px]"></div>
       </section>
     </>
   );
